@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-component-e2e-buaxpqnwpa
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-code-with-quarkus-fr7v
+    app.kubernetes.io/part-of: pet-clinic-e2e-fexhfckhec
+  name: quarkus-component-e2e-buaxpqnwpa
+  namespace: has-e2e-vbhl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: quarkus-component-e2e-buaxpqnwpa
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: quarkus-component-e2e-buaxpqnwpa
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:has-e2e-vbhl-quarkus-component-e2e-buaxpqnwpa
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
